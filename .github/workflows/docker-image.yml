@@ -15,7 +15,8 @@ jobs:
 
     steps:
     - name: Checkout code
-        env:
+      
+        
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           echo "$SSH_PRIVATE_KEY" &gt; private_key
