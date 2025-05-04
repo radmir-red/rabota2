@@ -15,12 +15,6 @@ jobs:
 
     steps:
     - name: Checkout code
-        uses: docker-image.yml
-
-      - name: Build Docker image
-        run: docker build -t myapp .
-        steps:
-      - name: SSH into VM and deploy
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
